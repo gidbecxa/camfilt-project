@@ -1,0 +1,442 @@
+/* Font-family */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+/* Reset Root */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* CSS Variables here */
+:root {
+    --primary-color: royalblue;
+    --link-color: #506690;
+    --btn-hover-color: #2b50c7;
+    --lg-heading: #1c1c1c;
+    --text-content: #869ab8;
+    --fixed-header-height: 4.5rem;
+    --accent-color: rgb(207, 218, 248);
+}
+
+/* Reset HTML */
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #fafbfb;
+}
+ul > li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Container style */
+.container {
+    width: 100%;
+    /*background-color: #333; just for preview*/
+}
+@media screen and (min-width: 1040px) {
+    .container {
+        width: 1040px;
+        margin: 0 auto;
+    }
+}
+
+/* Header style */
+.header {
+    height: var(--fixed-header-height);
+    padding: 0 1.7rem;
+    /*background-color: #333; just for preview*/
+}
+
+header > nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo > h2 {
+    font-size: 28px;
+    color: var(--primary-color);
+}
+
+.top_menu_ul {
+    display: flex;
+    align-items: center;
+}
+.top_menu_ul > li {
+    margin: 0 2rem;
+}
+.top_menu_ul > li > a {
+    font-size: 1.05rem;
+    line-height: 27px;
+    color: var(--link-color);
+    text-transform: capitalize;
+    letter-spacing: .5px;
+}
+.top_menu_ul li a:hover {
+    color: var(--primary-color);
+}
+.toggle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--lg-heading);
+    z-index: 4;
+}
+.top_menu,
+.top_menu > .cls_btn {
+    display: none;
+}
+
+.show {
+    right: 3% !important;
+}
+
+/* Wrapper style goes here */
+.wrapper {
+    width: 100%;
+    /* border: 1px solid #333; */
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+}
+.grid-hero {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+.grid-hero-item-1 {
+    padding-top: 5rem;
+    padding-left: 1.5rem;
+}
+.hero-heading {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 55px;
+}
+.hero-heading span {
+    color: var(--primary-color);
+}
+.hero-caption {
+    margin-top: 1.5rem;
+    font-size: 19px;
+    line-height: 28px;
+    color: rgb(65, 70, 87);
+}
+
+.hero_btn_cont {
+    margin-top: 3.5rem;
+    display: flex;
+    width: 100%;
+}
+.btn {
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: capitalize;
+    border-radius: 7px;
+    letter-spacing: 0;
+    transition: .4s;
+    font-weight: 500;
+    box-shadow: 0 0.5em 1.5em rgba(22, 28, 45, 0.1);
+}
+.btn:hover {
+    transform: translateY(-3px);
+}
+.explore_btn {
+    background-color: var(--primary-color);
+    width: 180px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.explore_btn i {
+    margin-left: 0.5em;
+}
+.explore_btn:hover {
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    background-color: var(--btn-hover-color);
+}
+.learn_more_btn {
+    width: 150px;
+    height: 55px;
+    background-color: rgb(207, 218, 248);
+    color: darkblue;
+}
+.learn_more_btn:hover {
+    background-color: rgb(200, 210, 238);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.grid-hero-item-2 {
+    width: 100%;
+    height: 100%;
+}
+.hero_image_cont {
+    width: 500px;
+    max-width: 100%;
+    height: 440px;
+}
+.hero_image_cont > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.grid-3-features {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 2rem;
+    padding: 1rem;
+}
+.grid-feature {
+   height: 100%; 
+}
+.icon{
+    width: 100%;
+    line-height: 40px;
+}
+.icon svg {
+    width: 30px;
+    height: 30px;
+    color: var(--link-color);
+}
+.feature_text {
+    width: 100%;
+}
+.feature_text > span {
+    width: 100%;
+    display: block;
+    font-size: 1.25rem;
+    line-height: 33px;
+    color: var(--lg-heading);
+}
+.feature_text > p {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    font-weight: 400;
+    color: rgb(65, 70, 87);
+    line-height: 1.55em;
+    font-size: 15.5px;
+}
+.feature_text > p > span {
+    color: var(--primary-color);
+}
+footer {
+    width: 100%;
+    background-color: var(--primary-color);
+    height: 1em;
+    margin-top: 8em;
+}
+
+.wrapper-class-2 {
+    padding-top: 4rem;
+}
+
+div.wrapper-class-2 {
+    padding-bottom: 3rem;
+}
+
+.grid-sections {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+}
+.section-3 {
+    background-color: var(--accent-color);
+}
+.section-3-item-1 {
+    width: 100%;
+    height: 100%;
+    padding-left: 1rem;
+}
+.filter_display_cont {
+    width: 299px;
+    max-width: 100%;
+    height: 427px;
+}
+.filter_display_cont > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: 0 0.5em 2em rgba(22, 28, 45, 0.15);
+}
+.section-3-item-2 {
+    height: 100%;
+    width: 100%;
+    padding: 1rem 0.5rem;
+    position: relative;
+    top: 25%;
+    transform: translateY(-20%);
+}
+.section-3-item-2 > span {
+    width: 100%;
+    display: block;
+    font-size: 1.5rem;
+    line-height: 2em;
+    color: #1c1c1c;
+}
+.section-3-item-2 > p {
+    display: block;
+    width: 100%;
+    margin-top: 2em;
+    font-size: 1rem;
+    line-height: 1.35rem;
+    color: #1c1c1c;
+    font-weight: 400;
+}
+.section-3-item-2 > .explore_btn {
+    margin: 3rem 0 0;
+    letter-spacing: 0.5px;
+    justify-content: left;
+    padding-left: 16px;
+    font-size: 1.1rem;
+}
+
+/* 'Media Queries' for responsive design go here */
+@media screen and (min-width: 768px) {
+    nav .toggle {
+        display: none;
+    }
+    .top_menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo > h2 {
+        font-size: 23px;
+    }
+    .top_menu {
+        position: fixed;
+        width: 93%;
+        height: 100%;
+        display: block;
+        top: 2.5%;
+        right: -100%;
+        background-color: #fff;
+        padding: 3rem;
+        border-radius: 10px;
+        box-shadow: 0 0.5rem 1.5rem rgba(22, 28, 45, 0.1);
+        z-index: 50;
+        transition: 0.4s;
+    }
+    .top_menu_ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 4rem;
+    }
+    .top_menu_ul > li {
+        margin: 1rem 0;
+    }
+    .top_menu_ul > li > a {
+        font-size: 18px;
+    }
+    .top_menu > .cls_btn {
+        display: block;
+        position: absolute;
+        right: 10%;
+        font-size: 25px;
+        color: var(--link-color);
+    }
+    .top_menu > .cls_btn:hover {
+        color: #1c1c1c;
+    }
+    .wrapper {
+        padding: 0 0.7em;
+    }
+    .grid-hero-item-1 {
+        padding-left: 0rem;
+        
+    }
+    .hero-heading {
+        font-size: 35px;
+    }
+    .explore_btn {
+        width: 140px;
+        height: 55px;
+        font-size: 13.5px;
+        margin-right: 1rem;
+    }
+    .grid-3-features {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* I had used 'minimax' here instead of minmax and spent a hell of time finding the bug*/
+    }
+    .feature_text >  p {
+        line-height: 23px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .wrapper {
+        padding-top: 3rem;
+    }
+    .grid-hero {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+    .grid-hero-item-1 {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+    }
+    .hero-heading {
+        font-size: 32px;
+        text-align: center;
+        line-height: 40px;
+    }
+    .hero-caption {
+        font-size: 16px;
+        text-align: center;
+        padding: 0.7rem;
+    }
+    .hero_btn_cont {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .grid-hero-item-2 {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero_image_cont {
+        width: 350px;
+        height: 350px;
+    }
+    .feature_text > span {
+        font-size: 19px;
+    }
+}
